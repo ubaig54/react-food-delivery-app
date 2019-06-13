@@ -1,33 +1,97 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    font-size: 0.9em;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+* {
+    transition: .2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: solid 1px #ccc;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"] {
+    border: solid 1px #D70F64;
+    background: #D70F64;
+    color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(226, 42, 119);
+}
+
+input:focus {
+    outline: none;
+    border: solid 1px rgb(226, 101, 153);
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    overflow: hidden;
+    padding: 20px;
+}
+
+header .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header .logo {
+    float: left;
+    color: #D70F64;
+    font-weight: bold;
+}
+
+header .logo:hover{
+    cursor: pointer;
+}
+
+nav {
+    float: right;
+}
+
+nav span:hover {
+    cursor: pointer;
+    color: #D70F64;
+}
+
+.Home .tabs {
+    text-align: center;
+}
+
+.Home .tabs span {
+    background: #efefef;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.Home .tabs span:hover {
+    cursor: pointer;
+    background: #D70F64;
+    color: #fff;
+}
+
+.UserLogin, .RestaurantLogin, .UserSignup, .RestaurantSignup {
+    /* background: #efefef; */
+    width: 350px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px;
 }
