@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
+
 
 import Navbar from '../screens/Navbar';
 
@@ -9,8 +10,13 @@ import RestaurantLogin from '../screens/RestaurantLogin';
 import UserSignup from '../screens/UserSignup';
 import RestaurantSignup from '../screens/RestaurantSignup';
 
+import Dashboard from '../screens/Dashboard';
+
+import createBrowserHistory from 'history/createBrowserHistory';
+const customHistory = createBrowserHistory();
+
 const CustomeRoutes = () => (
-    <Router>
+    <Router history={customHistory}>
         <div>
             <Navbar />
             <Route exact path="/" component={Home} />
@@ -18,6 +24,8 @@ const CustomeRoutes = () => (
             <Route path="/restaurantLogin" component={RestaurantLogin} />
             <Route path="/userSignup" component={UserSignup} />
             <Route path="/restaurantSignup" component={RestaurantSignup} />
+
+            <Route path="/dashboard" component={Dashboard} />
         </div>
     </Router>
 )

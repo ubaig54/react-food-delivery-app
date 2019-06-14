@@ -6,10 +6,30 @@ class UserLogin extends Component {
         super();
         this.state = {
             isLogin: true,
+
+            email: '',
+            password: '',
+
+            isCredentials: true,
+        }
+
+        this.userLogin = this.userLogin.bind(this);
+    }
+
+    userLogin() {
+        const { email, password } = this.state;
+
+        if (email !== 'asd' && password !== 'asd') {
+            this.setState({ isCredentials: false });
+        } else {
+            this.setState({ isCredentials: true });
+
+            this.props.history.push('/');
         }
     }
 
     render() {
+        const { isCredentials } = this.state;
         return (
             <div className="UserLogin login">
                 <div className="tabs">
@@ -21,9 +41,10 @@ class UserLogin extends Component {
                     </Link>
                 </div>
                 <h2>Log in - User</h2>
-                <input type="email" placeholder="Email" /><br />
-                <input type="password" placeholder="Password" /><br />
-                <input type="submit" value="Log in" /><br />
+                {!isCredentials && <div className="formError">Email or password is incorrect</div>}
+                <input onChange={(e) => { this.setState({ email: e.target.value }) }} type="email" placeholder="Email" /><br />
+                <input onChange={(e) => { this.setState({ password: e.target.value }) }} type="password" placeholder="Password" /><br />
+                <input onClick={this.userLogin} type="submit" value="Log in" /><br />
             </div>
         )
     }

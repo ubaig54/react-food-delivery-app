@@ -5,11 +5,29 @@ class RestaurantLogin extends Component {
     constructor() {
         super();
         this.state = {
+            isLogin: true,
 
+            email: '',
+            password: '',
+
+            isCredentials: true,
+        }
+
+        this.restaurantLogin = this.restaurantLogin.bind(this);
+    }
+
+    restaurantLogin() {
+        const { email, password } = this.state;
+
+        if (email !== 'asd' && password !== 'asd') {
+            this.setState({ isCredentials: false });
+        } else {
+            this.setState({ isCredentials: true });
         }
     }
 
     render() {
+        const { isCredentials } = this.state;
         return (
             <div className="RestaurantLogin login">
                 <div className="tabs">
@@ -21,9 +39,10 @@ class RestaurantLogin extends Component {
                     </Link>
                 </div>
                 <h2>Log in - Restaurant</h2>
-                <input type="email" placeholder="Email" /><br />
-                <input type="password" placeholder="Password" /><br />
-                <input type="submit" value="Log in" /><br />
+                {!isCredentials && <div className="formError">Email or password is incorrect</div>}
+                <input onChange={(e) => { this.setState({ email: e.target.value }) }} type="email" placeholder="Email" /><br />
+                <input onChange={(e) => { this.setState({ password: e.target.value }) }} type="password" placeholder="Password" /><br />
+                <input onClick={this.restaurantLogin} type="submit" value="Log in" /><br />
             </div>
         )
     }

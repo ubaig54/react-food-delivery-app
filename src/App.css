@@ -5,6 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     /* color: #555; */
     /* font-size: 0.9em; */
+    background: #000;
 }
 
 * {
@@ -18,7 +19,7 @@ body {
 input, select {
     padding: 10px 15px;
     margin: 5px 0;
-    border-radius: 6px;
+    border-radius: 3px;
     border: solid 1px #ccc;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
@@ -47,7 +48,7 @@ input[type="radio"] {
     margin: 10px;
 }
 
-label{
+label {
     color: #fff;
 }
 
@@ -55,10 +56,15 @@ button {
     font-family: 'Montserrat', sans-serif;
 }
 
-.App{
-    min-height: 100vh;
+.App {
+    height: 100vh;
     background: url('./assets/images/hero.jpg');
     background-size: cover;
+}
+
+.formError{
+    color: red;
+    font-size: small;
 }
 
 header {
@@ -85,7 +91,7 @@ nav {
     float: right;
 }
 
-nav span{
+nav span {
     color: #fff;
 }
 
@@ -94,7 +100,7 @@ nav span:hover {
     color: #FFA200;
 }
 
-.login h2{
+.login h2 {
     color: #fff;
 }
 
@@ -103,15 +109,15 @@ nav span:hover {
     margin-top: 20px;
 }
 
-.login .tabs .link{
+.login .tabs .link {
     color: #333;
 }
 
 .login .tabs span {
     background: #efefef;
     padding: 8px 16px;
-    border-radius: 6px;
-    margin: 0 10px;
+    border-radius: 3px;
+    margin: 0 5px;
     font-weight: bold;
 }
 
@@ -122,7 +128,7 @@ nav span:hover {
 }
 
 .UserLogin, .RestaurantLogin, .UserSignup, .RestaurantSignup {
-    width: 350px;
+    max-width: 350px;
     margin: 0 auto;
     border-radius: 10px;
     padding: 0 20px;
@@ -147,7 +153,13 @@ nav span:hover {
     color: #FFA200;
 } */
 
-.cravings{
+.cravings {
     /* color: #15B50D;
     color: #FFA200; */
+}
+
+@media (max-width: 400px) {
+    .Home h1 {
+        font-size: 3em;
+    }
 }

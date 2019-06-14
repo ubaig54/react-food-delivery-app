@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Accounts from './screens/Accounts';
-import Home from './screens/Home';
 
 import CustomRoutes from './components/CustomRoutes';
 
