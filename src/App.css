@@ -3,12 +3,16 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    color: #555;
+    /* color: #555; */
     /* font-size: 0.9em; */
 }
 
 * {
     transition: .2s;
+}
+
+.link {
+    text-decoration: none;
 }
 
 input, select {
@@ -43,13 +47,17 @@ input[type="radio"] {
     margin: 10px;
 }
 
+label{
+    color: #fff;
+}
+
 button {
     font-family: 'Montserrat', sans-serif;
 }
 
 .App{
-    height: 100vh;
-    /* background: url('./assets/images/hero.jpg') right; */
+    min-height: 100vh;
+    background: url('./assets/images/hero.jpg');
     background-size: cover;
 }
 
@@ -77,18 +85,26 @@ nav {
     float: right;
 }
 
-.link {
-    text-decoration: none;
+nav span{
+    color: #fff;
 }
 
 nav span:hover {
     cursor: pointer;
-    color: #D70F64;
+    color: #FFA200;
+}
+
+.login h2{
+    color: #fff;
 }
 
 .login .tabs {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+.login .tabs .link{
+    color: #333;
 }
 
 .login .tabs span {
@@ -101,7 +117,7 @@ nav span:hover {
 
 .login .tabs span:hover {
     cursor: pointer;
-    background: #D70F64;
+    background: #32782E;
     color: #fff;
 }
 
@@ -109,19 +125,29 @@ nav span:hover {
     width: 350px;
     margin: 0 auto;
     border-radius: 10px;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .Home {
-    height: 60vh;
+    height: 70vh;
+    max-width: 1000px;
+    margin: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .Home h1 {
-    text-align: center;
     text-transform: uppercase;
-    /* color: #fff; */
+    color: #fff;
     font-size: 4em;
+}
+
+/* .your{
+    color: #FFA200;
+} */
+
+.cravings{
+    /* color: #15B50D;
+    color: #FFA200; */
 }

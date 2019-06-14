@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 class RestaurantSignup extends Component {
     constructor() {
@@ -10,7 +11,15 @@ class RestaurantSignup extends Component {
 
     render() {
         return (
-            <div className="RestaurantSignup">
+            <div className="RestaurantSignup login">
+                <div className="tabs">
+                    <Link className="link" to="/restaurantLogin">
+                        <span onClick={() => { this.setState({ isLogin: true }) }} > Log in</span>
+                    </Link>
+                    <Link className="link" to="/restaurantSignup">
+                        <span onClick={() => { this.setState({ isLogin: false }) }} >Register</span>
+                    </Link>
+                </div>
                 <h2>Sing up - Restaurant</h2>
                 <input type="text" placeholder="Full name" /><br />
                 <input type="text" placeholder="Restaurant name" /><br />

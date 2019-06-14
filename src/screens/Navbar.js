@@ -25,10 +25,10 @@ class Navbar extends Component {
                         {!isLoginClicked && !isUser && <Link className="link" to="userLogin" onClick={() => { this.setState({ isUser: true, isLoginClicked: true, }) }}>
                             <span>Login</span>
                         </Link>}
-                        {isLoginClicked && isUser && <Link className="link" to="restaurantLogin" onClick={() => { this.setState({ isUser: false, isLoginClicked: true, }) }}>
+                        {isLoginClicked && isUser && <Link className="link" className="link" to="restaurantLogin" onClick={() => { this.setState({ isUser: false, isLoginClicked: true, }) }}>
                             <span>Login as Restaurant</span>
                         </Link>}
-                        {isLoginClicked && !isUser && <Link to="userLogin" onClick={() => { this.setState({ isUser: true, isLoginClicked: true, }) }}>
+                        {isLoginClicked && !isUser && <Link className="link" to="userLogin" onClick={() => { this.setState({ isUser: true, isLoginClicked: true, }) }}>
                             <span>I want to order food</span>
                         </Link>}
                     </nav>

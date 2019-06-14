@@ -17,10 +17,10 @@ class Accounts extends Component {
         const { isLogin, isUser } = this.state;
         return (
             <div className="Accounts">
-                <div className="tabs">
+                {/* <div className="tabs">
                     <span onClick={() => { this.setState({ isLogin: true }) }} > Log in</span>
                     <span onClick={() => { this.setState({ isLogin: false }) }} >Register</span>
-                </div>
+                </div> */}
                 {isLogin && isUser && <UserLogin />}
                 {!isLogin && isUser && <UserSignup />}
                 {isLogin && !isUser && <RestaurantLogin />}
