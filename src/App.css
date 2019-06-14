@@ -5,7 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     /* color: #555; */
     /* font-size: 0.9em; */
-    background: #000;
+    /* background: #000; */
 }
 
 * {
@@ -19,7 +19,7 @@ body {
 input, select {
     padding: 10px 15px;
     margin: 5px 0;
-    border-radius: 3px;
+    border-radius: 5px;
     border: solid 1px #ccc;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
@@ -30,6 +30,8 @@ input[type="submit"] {
     border: solid 1px #32782E;
     background: #32782E;
     color: #fff;
+    padding: 8px 20px;
+    border-radius: 100px;
 }
 
 input[type="submit"]:hover {
@@ -40,7 +42,7 @@ input[type="submit"]:hover {
 
 input:focus, select:focus {
     outline: none;
-    border: solid 1px rgb(226, 101, 153);
+    border: solid 1px #FFA200;
 }
 
 input[type="radio"] {
@@ -48,33 +50,26 @@ input[type="radio"] {
     margin: 10px;
 }
 
-label {
-    color: #fff;
-}
-
 button {
     font-family: 'Montserrat', sans-serif;
 }
 
-.App {
-    height: 100vh;
-    background: url('./assets/images/hero.jpg');
-    background-size: cover;
-}
-
-.formError{
+.formError {
     color: red;
     font-size: small;
 }
 
 header {
     overflow: hidden;
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 header .container {
     max-width: 1200px;
     margin: auto;
+    padding: 20px;
 }
 
 header .logo {
@@ -92,16 +87,17 @@ nav {
 }
 
 nav span {
+    background: #32782E;
     color: #fff;
+    padding: 5px 20px;
+    border-radius: 100px;
+    font-size: small;
+    text-transform: uppercase;
 }
 
 nav span:hover {
     cursor: pointer;
-    color: #FFA200;
-}
-
-.login h2 {
-    color: #fff;
+    background: #FFA200;
 }
 
 .login .tabs {
@@ -115,10 +111,12 @@ nav span:hover {
 
 .login .tabs span {
     background: #efefef;
-    padding: 8px 16px;
-    border-radius: 3px;
+    padding: 5px 20px;
+    border-radius: 100px;
     margin: 0 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-size: small;
+    text-transform: uppercase;
 }
 
 .login .tabs span:hover {
@@ -129,17 +127,29 @@ nav span:hover {
 
 .UserLogin, .RestaurantLogin, .UserSignup, .RestaurantSignup {
     max-width: 350px;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
     border-radius: 10px;
     padding: 0 20px;
 }
 
 .Home {
-    height: 70vh;
-    max-width: 1000px;
-    margin: auto;
+    height: 100vh;
+    /* max-width: 1000px;
+    margin: auto; */
+    /* display: flex;
+    align-items: center; */
+    /* padding: 20px; */
+    height: 100vh;
+    background: url('./assets/images/hero.jpg');
+    background-size: cover;
+}
+
+.Home .container {
     display: flex;
     align-items: center;
+    height: 80vh;
+    max-width: 1000px;
+    margin: auto;
     padding: 20px;
 }
 
@@ -158,8 +168,45 @@ nav span:hover {
     color: #FFA200; */
 }
 
-@media (max-width: 400px) {
+.Dashboard {
+    margin-top: 80px;
+}
+
+.searchbar {
+    max-width: 600px;
+    margin: auto;
+    padding: 8px 15px;
+    box-shadow: 0px 0 36px 0 #ececec;
+    border-radius: 100px;
+}
+
+.searchbar input[type="text"] {
+    width: 86%;
+    border-radius: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 15px 30px;
+}
+
+.searchbar input[type="submit"] {
+    width: 100px;
+    margin-left: -18px;
+    padding: 15px 30px;
+}
+
+@media (max-width: 600px) {
     .Home h1 {
         font-size: 3em;
+    }
+    .searchbar{
+        border-radius: 0;
+    }
+    .searchbar input[type="text"] {
+        width: 100%;
+        border-radius: 100px;
+    }
+    .searchbar input[type="submit"] {
+        width: 100%;
+        margin: auto;
     }
 }
