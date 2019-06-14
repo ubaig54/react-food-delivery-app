@@ -4,14 +4,14 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: #555;
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
 }
 
 * {
     transition: .2s;
 }
 
-input {
+input, select {
     padding: 10px 15px;
     margin: 5px 0;
     border-radius: 6px;
@@ -22,23 +22,35 @@ input {
 }
 
 input[type="submit"] {
-    border: solid 1px #D70F64;
-    background: #D70F64;
+    border: solid 1px #32782E;
+    background: #32782E;
     color: #fff;
 }
 
 input[type="submit"]:hover {
     cursor: pointer;
-    background: rgb(226, 42, 119);
+    background: rgb(255, 153, 0);
+    border: solid 1px rgb(255, 153, 0);
 }
 
-input:focus {
+input:focus, select:focus {
     outline: none;
     border: solid 1px rgb(226, 101, 153);
 }
 
+input[type="radio"] {
+    width: auto;
+    margin: 10px;
+}
+
 button {
     font-family: 'Montserrat', sans-serif;
+}
+
+.App{
+    height: 100vh;
+    /* background: url('./assets/images/hero.jpg') right; */
+    background-size: cover;
 }
 
 header {
@@ -47,7 +59,7 @@ header {
 }
 
 header .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -57,7 +69,7 @@ header .logo {
     font-weight: bold;
 }
 
-header .logo:hover{
+header .logo:hover {
     cursor: pointer;
 }
 
@@ -65,16 +77,21 @@ nav {
     float: right;
 }
 
+.link {
+    text-decoration: none;
+}
+
 nav span:hover {
     cursor: pointer;
     color: #D70F64;
 }
 
-.Home .tabs {
+.login .tabs {
     text-align: center;
+    margin-top: 40px;
 }
 
-.Home .tabs span {
+.login .tabs span {
     background: #efefef;
     padding: 8px 16px;
     border-radius: 6px;
@@ -82,16 +99,29 @@ nav span:hover {
     font-weight: bold;
 }
 
-.Home .tabs span:hover {
+.login .tabs span:hover {
     cursor: pointer;
     background: #D70F64;
     color: #fff;
 }
 
 .UserLogin, .RestaurantLogin, .UserSignup, .RestaurantSignup {
-    /* background: #efefef; */
     width: 350px;
-    margin: 20px auto;
+    margin: 0 auto;
     border-radius: 10px;
     padding: 20px;
+}
+
+.Home {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home h1 {
+    text-align: center;
+    text-transform: uppercase;
+    /* color: #fff; */
+    font-size: 4em;
 }

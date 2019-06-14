@@ -15,20 +15,20 @@ class UserSignup extends Component {
                 <input type="text" placeholder="Full name" /><br />
                 <input type="email" placeholder="Email" /><br />
                 <label>
-                    <input type="radio" />
+                    <input type="radio" name="gender" />
                     Male
                 </label>
                 <label>
-                    <input type="radio" />
+                    <input type="radio" name="gender" />
                     Female
                 </label><br />
                 <input type="number" placeholder="Age" /><br />
                 <select>
-                    <option>--Country--</option>
+                    <option>Country</option>
                     <option>Pakistan</option>
                 </select>
                 <select>
-                    <option>--City--</option>
+                    <option>City</option>
                     <option>Karachi</option>
                     <option>Lahore</option>
                     <option>Islamabad</option>
@@ -36,7 +36,7 @@ class UserSignup extends Component {
                 </select><br />
                 <input type="password" placeholder="Password" /><br />
                 <input type="password" placeholder="Confirm Password" /><br />
-                <input type="submit" /><br />
+                <input type="submit" value="Register" /><br />
             </div>
         )
     }

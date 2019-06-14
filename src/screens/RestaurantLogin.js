@@ -10,11 +10,15 @@ class RestaurantLogin extends Component {
 
     render() {
         return (
-            <div className="RestaurantLogin">
+            <div className="RestaurantLogin login">
+                <div className="tabs">
+                    <span onClick={() => { this.setState({ isLogin: true }) }} > Log in</span>
+                    <span onClick={() => { this.setState({ isLogin: false }) }} >Register</span>
+                </div>
                 <h2>Log in - Restaurant</h2>
                 <input type="email" placeholder="Email" /><br />
                 <input type="password" placeholder="Password" /><br />
-                <input type="submit" /><br />
+                <input type="submit" value="Log in" /><br />
             </div>
         )
     }
