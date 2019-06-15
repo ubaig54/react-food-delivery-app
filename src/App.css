@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
 body {
     padding: 0;
     margin: 0;
@@ -59,11 +59,19 @@ button {
     font-size: small;
 }
 
+.oneFourth {
+    width: 25%;
+    float: left;
+}
+
 header {
     overflow: hidden;
     position: fixed;
     top: 0;
+    z-index: 1;
     width: 100%;
+    background: #fff;
+    padding-bottom: 10px;
 }
 
 header .container {
@@ -100,16 +108,16 @@ nav span:hover {
     background: #FFA200;
 }
 
-.login .tabs {
+.tabs {
     text-align: center;
     margin-top: 20px;
 }
 
-.login .tabs .link {
+.tabs .link {
     color: #333;
 }
 
-.login .tabs span {
+.tabs span {
     background: #efefef;
     padding: 5px 20px;
     border-radius: 100px;
@@ -117,9 +125,10 @@ nav span:hover {
     /* font-weight: bold; */
     font-size: small;
     text-transform: uppercase;
+    display: inline-block;
 }
 
-.login .tabs span:hover {
+.tabs span:hover {
     cursor: pointer;
     background: #32782E;
     color: #fff;
@@ -155,8 +164,9 @@ nav span:hover {
 
 .Home h1 {
     text-transform: uppercase;
-    color: #fff;
+    /* color: #fff; */
     font-size: 4em;
+    line-height: 1;
 }
 
 /* .your{
@@ -174,9 +184,9 @@ nav span:hover {
 
 .searchbar {
     max-width: 600px;
-    margin: auto;
+    margin: 20px auto;
     padding: 8px 15px;
-    box-shadow: 0px 0 36px 0 #ececec;
+    /* box-shadow: 0px 0 30px 0 #e4e4e4; */
     border-radius: 100px;
 }
 
@@ -194,19 +204,147 @@ nav span:hover {
     padding: 15px 30px;
 }
 
+.chips {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.chips span {
+    padding: 5px 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 100px;
+    font-size: small;
+    margin: 5px;
+    display: inline-block;
+}
+
+.chips span:hover {
+    cursor: pointer;
+    background: #FFA200;
+}
+
+.thumbnailList {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.thumbnailList .Thumbnail {
+    width: 25%;
+    float: left;
+    overflow: hidden;
+}
+
+.thumbnailList .Thumbnail .container {
+    margin: 0 10px 30px;
+}
+
+.thumbnailList .Thumbnail .container .imgContainer {
+    overflow: hidden;
+    height: 200px;
+}
+
+.thumbnailList .Thumbnail figure {
+    margin: 0;
+    cursor: pointer;
+}
+
+.thumbnailList .Thumbnail figure:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+}
+
+.thumbnailList .Thumbnail img {
+    width: 100%;
+    transition: .4s;
+}
+
+.thumbnailList .Thumbnail .title {
+    font-weight: 600;
+    color: #555;
+    margin: 5px 0;
+    height: 17px;
+    overflow: hidden;
+}
+
+.thumbnailList .Thumbnail .description {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0;
+    height: 34px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.myRequestsList {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.MyRequestsList {
+    text-align: center;
+    border: solid 1px #ccc;
+    overflow: hidden;
+    font-size: small;
+    margin: 20px 0;
+}
+
+.MyRequestsList .head {
+    width: 100%;
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+    background: #efefef;
+    overflow: hidden;
+}
+
+.MyRequestsList .head .orderNum{
+    float: left;
+}
+
+.MyRequestsList .head .rating{
+    float: right;
+    padding: 0 20px;
+}
+
+.MyRequestsList .myRequestsCells {
+    padding: 15px 0;
+}
+
+.status {
+    text-decoration: underline;
+}
+
 @media (max-width: 600px) {
     .Home h1 {
         font-size: 3em;
     }
-    .searchbar{
+    .searchbar {
         border-radius: 0;
+        box-shadow: none;
     }
     .searchbar input[type="text"] {
         width: 100%;
         border-radius: 100px;
+        padding: 10px 20px;
     }
     .searchbar input[type="submit"] {
         width: 100%;
         margin: auto;
+        padding: 10px 20px;
+    }
+    .thumbnailList .Thumbnail {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (min-width:600px) and (max-width: 1024px) {
+    .thumbnailList .Thumbnail {
+        width: 50%;
     }
 }

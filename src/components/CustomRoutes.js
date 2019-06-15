@@ -11,8 +11,10 @@ import UserSignup from '../screens/UserSignup';
 import RestaurantSignup from '../screens/RestaurantSignup';
 
 import Dashboard from '../screens/Dashboard';
+import Restaurants from '../components/Restaurants';
+import MyRequests from '../components/MyRequests';
 
-import createBrowserHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 const customHistory = createBrowserHistory();
 
 const CustomeRoutes = () => (
@@ -26,6 +28,8 @@ const CustomeRoutes = () => (
             <Route path="/restaurantSignup" component={RestaurantSignup} />
 
             <Route path="/dashboard" component={Dashboard} />
+            <Route path="/restaurants" component={Restaurants} />
+            <Route path="/myrequests" component={MyRequests} />
         </div>
     </Router>
 )
