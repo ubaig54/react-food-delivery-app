@@ -23,6 +23,8 @@ class RestaurantLogin extends Component {
             this.setState({ isCredentials: false });
         } else {
             this.setState({ isCredentials: true });
+
+            this.props.history.push('/restaurant/pending');
         }
     }
 

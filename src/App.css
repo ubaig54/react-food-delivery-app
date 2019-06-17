@@ -90,6 +90,11 @@ header .logo:hover {
     cursor: pointer;
 }
 
+header .logo img {
+    display: inline-block;
+    margin-bottom: -5px;
+}
+
 nav {
     float: right;
 }
@@ -149,17 +154,21 @@ nav span:hover {
     align-items: center; */
     /* padding: 20px; */
     height: 100vh;
-    background: url('./assets/images/hero.jpg');
+    background: url('./assets/images/hero.jpg') center;
     background-size: cover;
 }
 
 .Home .container {
     display: flex;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
     max-width: 1000px;
     margin: auto;
     padding: 20px;
+}
+
+.Home .inHomeContainer {
+    max-width: 700px;
 }
 
 .Home h1 {
@@ -182,7 +191,7 @@ nav span:hover {
     margin-top: 80px;
 }
 
-.searchbar {
+.Restaurants .searchbar {
     max-width: 600px;
     margin: 20px auto;
     padding: 8px 15px;
@@ -202,6 +211,15 @@ nav span:hover {
     width: 100px;
     margin-left: -18px;
     padding: 15px 30px;
+    text-transform: uppercase;
+}
+
+.Home .searchbar {
+    max-width: 600px;
+}
+
+.Home .searchbar input[type="text"] {
+    /* box-shadow: 0px 0 30px 0 #e4e4e4; */
 }
 
 .chips {
@@ -302,11 +320,11 @@ nav span:hover {
     overflow: hidden;
 }
 
-.MyRequestsList .head .orderNum{
+.MyRequestsList .head .orderNum {
     float: left;
 }
 
-.MyRequestsList .head .rating{
+.MyRequestsList .head .rating {
     float: right;
     padding: 0 20px;
 }
@@ -321,7 +339,7 @@ nav span:hover {
 
 @media (max-width: 600px) {
     .Home h1 {
-        font-size: 3em;
+        font-size: 2.2em;
     }
     .searchbar {
         border-radius: 0;

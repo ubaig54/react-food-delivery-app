@@ -21,10 +21,10 @@ class MyRequests extends Component {
         return (
             <div className="MyRequests Dashboard">
                 <div className="tabs">
-                    <Link className="link" to="/restaurants">
+                    <Link className="link" to="/user/restaurants">
                         <span onClick={() => { this.setState({ isLogin: true }) }}>Restaurants</span>
                     </Link>
-                    <Link className="link" to="/myrequests">
+                    <Link className="link" to="/user/myrequests">
                         <span onClick={() => { this.setState({ isLogin: false }) }}>My Requests</span>
                     </Link>
                 </div>

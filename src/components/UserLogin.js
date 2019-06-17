@@ -24,7 +24,7 @@ class UserLogin extends Component {
         } else {
             this.setState({ isCredentials: true });
 
-            this.props.history.push('/restaurants');
+            this.props.history.push('/user/restaurants');
         }
     }
 
