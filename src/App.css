@@ -173,18 +173,8 @@ nav span:hover {
 
 .Home h1 {
     text-transform: uppercase;
-    /* color: #fff; */
     font-size: 4em;
     line-height: 1;
-}
-
-/* .your{
-    color: #FFA200;
-} */
-
-.cravings {
-    /* color: #15B50D;
-    color: #FFA200; */
 }
 
 .Dashboard {
@@ -216,10 +206,6 @@ nav span:hover {
 
 .Home .searchbar {
     max-width: 600px;
-}
-
-.Home .searchbar input[type="text"] {
-    /* box-shadow: 0px 0 30px 0 #e4e4e4; */
 }
 
 .chips {
