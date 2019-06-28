@@ -14,7 +14,7 @@ class Thumbnail extends Component {
                 <div className="container">
                     <figure>
                         <div className="imgContainer">
-                            <img src={this.props.img} alt="image" />
+                            <img src={this.props.img} alt="product image" />
                         </div>
                         <figcaption>
                             <div className="title">{this.props.title}</div>

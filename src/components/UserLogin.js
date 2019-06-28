@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
+import { loginUser } from '../store/actions/authActions';
+
 class UserLogin extends Component {
     constructor() {
         super();
@@ -16,15 +18,15 @@ class UserLogin extends Component {
         this.userLogin = this.userLogin.bind(this);
     }
 
-    userLogin() {
+    async userLogin() {
         const { email, password } = this.state;
 
-        if (email !== 'asd' && password !== 'asd') {
-            this.setState({ isCredentials: false });
-        } else {
-            this.setState({ isCredentials: true });
-
+        try {
+            const loginUserReturn = await loginUser({ email, password });
+            console.log('loginUserReturn', loginUserReturn)
             this.props.history.push('/user/restaurants');
+        } catch (err) {
+            console.log(err);
         }
     }
 

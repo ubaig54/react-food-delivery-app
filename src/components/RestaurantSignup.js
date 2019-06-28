@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
+import { signUpRestaurant } from '../store/actions/authActions';
+
 class RestaurantSignup extends Component {
     constructor() {
         super();
@@ -31,6 +33,18 @@ class RestaurantSignup extends Component {
 
     restaurantSignup() {
         const { fullName, restaurantName, email, gender, age, country, city, password, confirmPassword } = this.state;
+
+        let userDetails = {
+            fullName,
+            restaurantName,
+            email,
+            gender,
+            age,
+            country,
+            city,
+            password,
+            confirmPassword,
+        }
 
         //full name validation
         if (fullName.length === 0) {
@@ -100,6 +114,8 @@ class RestaurantSignup extends Component {
         } else {
             this.setState({ isConfirmPassword: true });
         }
+
+        signUpRestaurant(userDetails);
     }
 
     render() {

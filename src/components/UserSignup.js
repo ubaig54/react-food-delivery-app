@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import { signUpUser } from '../store/actions/authActions';
 
 class UserSignup extends Component {
     constructor() {
@@ -29,6 +30,17 @@ class UserSignup extends Component {
 
     userSignup() {
         const { fullName, email, gender, age, country, city, password, confirmPassword } = this.state;
+
+        let userDetails = {
+            fullName,
+            email,
+            gender,
+            age,
+            country,
+            city,
+            password,
+            confirmPassword,
+        }
 
         //full name validation
         if (fullName.length === 0) {
@@ -91,6 +103,8 @@ class UserSignup extends Component {
         } else {
             this.setState({ isConfirmPassword: true });
         }
+
+        signUpUser(userDetails);
     }
 
     render() {
